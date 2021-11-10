@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: transparent;
+}
+
+:root {
+	/* Common Directives */
+	@apply h-full;
+	@apply antialiased;
+}
+
+::selection {
+	/* Custom Selection Highlight */
+	background: theme('colors.nord10');
+	color: theme('colors.nord6');
+}
+
+body {
+	/*All content is inside this anyway. Base Text */
+	@apply text-nord4 font-medium bg-nord2 m-0 p-0;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body::-webkit-scrollbar {
+	@apply w-1;
+}
+
+body::-webkit-scrollbar-track {
+	@apply bg-nord3 rounded;
+}
+
+body::-webkit-scrollbar-thumb {
+	@apply bg-nord10 rounded;
+}
